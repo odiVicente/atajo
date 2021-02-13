@@ -12,19 +12,28 @@ public class Bicicleta {
         boolean luces = false;
         String marca = "Orbea";
     }
+    //El metodo sumaCamino suma los enteros contenidos en el array entrante 
+    //y retorna el resultado de la misma.
+    public static int sumaCamino(int[] camino) {
+    	int sumaArray = 0;
+    	for( int i=0; i<camino.length;i++) {
+    		sumaArray +=camino[i];
+    	}
+    	return sumaArray;
+    }
     
     public static String rutaCorta(int [] camino1, int [] camino2, int [] camino3)
     {
-        int sum1 = 0;
-        int sum2 = 0;
-        int sum3 = 0;
+        int sum1 = sumaCamino(camino1);
+        int sum2 = sumaCamino(camino2);
+        int sum3 = sumaCamino(camino3);
         
-        for(int i=0; i<camino1.length; i++)
+       /* for(int i=0; i<camino1.length; i++)
         {
             sum1 += camino1[i];
             sum2 += camino2[i];
             sum3 += camino3[i];
-        }
+        }*/
         
         if(sum1 < sum2 && sum1 < sum3)
         {
